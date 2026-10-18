@@ -1,0 +1,101 @@
+# TODO App — Next.js / TypeScript / Go / Docker
+
+# ОС и временные файлы редакторов
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+*.orig
+
+# JetBrains и локальные настройки редакторов
+.idea/
+*.iml
+.vscode/*.local.json
+
+# Локальное окружение; шаблоны без секретов остаются в Git
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.template
+!.env.*.template
+.envrc
+.direnv/
+
+# Runtime-секреты и ключи: JWT, TLS, доступы к провайдерам
+.secrets/
+/secrets/
+/infra/secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Node.js / pnpm
+node_modules/
+.pnpm-store/
+npm-debug.log*
+pnpm-debug.log*
+
+# Next.js / TypeScript
+.next/
+.turbo/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+/apps/web/out/
+/apps/web/dist/
+
+# Go: сборки и отладка
+/bin/
+/build/
+/apps/api/bin/
+/apps/api/build/
+*.exe
+*.exe~
+*.test
+*.prof
+__debug_bin*
+
+# Логи, кэш и временные файлы
+*.log
+.cache/
+.eslintcache
+.stylelintcache
+/tmp/
+/temp/
+/apps/api/tmp/
+
+# Отчёты тестов и покрытия
+coverage/
+coverage.out
+coverage-*.out
+*.coverprofile
+test-results/
+playwright-report/
+blob-report/
+
+# Локальные bind mounts и резервные копии контейнеров
+# Named volumes Docker находятся вне репозитория.
+/.docker-data/
+/.data/
+/infra/data/
+/infra/volumes/
+/infra/backups/
+/backups/
+
+# Персональные Compose overrides
+compose.override.yml
+compose.override.yaml
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Храним в Git:
+# pnpm-lock.yaml, go.mod, go.sum, go.work/go.work.sum (если используются командой),
+# Dockerfile, infra/compose.local.yaml, .gitlab-ci.yml, SQL-миграции,
+# OpenAPI, Grafana dashboards и конфигурации Prometheus/Loki/Alloy.
+# Шаблоны настроек должны содержать только демонстрационные значения.
